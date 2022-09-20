@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { AxiosResponse } from 'axios';
-import { Book, Books } from '../types/book';
+import {  Books } from '../types/book';
 
-const baseURL = 'http://localhost:3000/api/books/';
+const baseURL = process.env.axiosBaseURL;
 
 interface Options {
 	method: 'POST' | 'PUT' | 'PATCH' | 'DELETE';
