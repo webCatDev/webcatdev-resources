@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react';
 import { AxiosResponse } from 'axios';
 import {  Books } from '../types/book';
 
-const baseURL = process.env.axiosBaseURL;
+const baseURL = '/';
 
 interface Options {
 	method: 'POST' | 'PUT' | 'PATCH' | 'DELETE';
