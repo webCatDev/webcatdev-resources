@@ -6,9 +6,10 @@ import styles from '../styles/Home.module.css';
 import { Books, Book } from '../types/book';
 export default function Home() {
 	const router = useRouter();
-	console.log(router);
+
 
 	const { httpRequest, data, error, loading } = useAxios();
+console.log(data);
 
 	useEffect(() => {
 		 httpRequest();
