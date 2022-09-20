@@ -41,7 +41,7 @@ const useAxios = (): {
 				setData(bookData.data);
 				setLoading(false);
 			} catch (error) {
-				setError(error.message);
+				setError(error);
 			} finally {
 				setLoading(false);
 			}

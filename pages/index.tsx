@@ -14,7 +14,10 @@ export default function Home() {
 		 httpRequest();
   }, [httpRequest]);
 
-	if (error) return <p>{error.message}</p>;
+  if (error) {
+    console.log('error 💥', error)
+    return <p>{error.message}</p>
+  }
 
 	if (loading) return <p>Loading...</p>;
 

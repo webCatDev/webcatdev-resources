@@ -27,6 +27,7 @@ export default async function handler(
 			status: 'failed',
 			statusCode: response.statusCode,
 			message: err.message,
+			error: err
 		});
 	}
 }
