@@ -2,6 +2,7 @@
   "name": "library-app-mysql",
   "version": "0.1.0",
   "private": true,
+  "module": "esnext",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,12 +10,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sequelize": "^6.23.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
     "eslint": "8.23.1",
-    "eslint-config-next": "12.3.0"
+    "eslint-config-next": "12.3.0",
+    "mysql2": "^2.3.3"
   }
 }
