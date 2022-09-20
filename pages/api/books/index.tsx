@@ -7,7 +7,7 @@ export default async function handler(
 	request: NextApiRequest,
 	response: NextApiResponse
 ) {
-	return response.json({message: 'hello world'})
+	
 	try {
 		await Book.sync()
 		if (request.method === 'GET') {
