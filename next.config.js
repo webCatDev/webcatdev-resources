@@ -17,7 +17,7 @@ module.exports = (phase, { defaultConfig }) => {
 		reactStrictMode: true,
 		swcMinify: true,
 		env: {
-			axiosBaseURL: 'https://webcatdev-resources.vercel.app/',
+			axiosBaseURL: 'https://webcatdev-resources.vercel.app/api/books/',
 		},
 	};
 };
