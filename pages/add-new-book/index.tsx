@@ -26,7 +26,7 @@ const AddNewBookPage = () => {
 			},
 		});
 
-		window.location.replace('/')
+		window.location.replace('/');
 	};
 
 	if (error) return <p>Something went wrong.</p>;

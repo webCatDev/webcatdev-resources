@@ -9,10 +9,15 @@ export default async function handler(
 ) {
 	try {
 		await Book.sync();
+
+		if (request.method === 'OPTIONS') {
+			return response.status(200).send('ok');
+		}
+
 		if (request.method === 'GET') {
 			const { id } = request.query;
-			const books = await Book.findByPk(id as string)
-			response.json(books);
+			const books = await Book.findByPk(id as string);
+			return response.json(books);
 		}
 
 		if (request.method === 'PUT') {
@@ -22,13 +27,13 @@ export default async function handler(
 				{ title, description, author, cover },
 				{ where: { id } }
 			);
-			response.json(book);
+			return response.json(book);
 		}
 
 		if (request.method === 'DELETE') {
 			const { id } = request.query;
-			const book = await Book.destroy({ where: { id } });
-			response.json({ message: 'deleted succesfully' });
+			await Book.destroy({ where: { id } });
+			return response.json({ message: 'deleted succesfully' });
 		}
 	} catch (err) {
 		response.statusCode = 500;

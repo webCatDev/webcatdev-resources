@@ -1,17 +1,17 @@
 import axios from 'axios';
 import { useCallback, useState } from 'react';
 import { AxiosResponse } from 'axios';
-import {  Books } from '../types/book';
+import { Books } from '../types/book';
 
 const baseURL = '/api/books/';
 
 interface Options {
 	method: 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 	data?: {
-		cover?: string,
-		title?: string,
-		description?: string,
-		author?: string
+		cover?: string;
+		title?: string;
+		description?: string;
+		author?: string;
 	};
 }
 

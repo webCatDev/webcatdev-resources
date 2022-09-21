@@ -7,18 +7,17 @@ import { Books, Book } from '../types/book';
 export default function Home() {
 	const router = useRouter();
 
-
 	const { httpRequest, data, error, loading } = useAxios();
-console.log(data);
+	console.log(data);
 
 	useEffect(() => {
-		 httpRequest();
-  }, [httpRequest]);
+		httpRequest();
+	}, [httpRequest]);
 
-  if (error) {
-    console.log('error 💥', error)
-    return <p>{error.message}</p>
-  }
+	if (error) {
+		console.log('error 💥', error);
+		return <p>{JSON.stringify(error, null, 2)}</p>;
+	}
 
 	if (loading) return <p>Loading...</p>;
 
