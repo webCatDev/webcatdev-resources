@@ -8,7 +8,6 @@ export default async function handler(
 	response: NextApiResponse
 ) {	
 	try {
-		await Book.sync({force: true})
 		if (request.method === 'GET') {
 			const books = await Book.findAll({attributes: ['id','title', 'cover']})
 			response.json(books)
