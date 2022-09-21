@@ -8,7 +8,7 @@ export default async function handler(
 	response: NextApiResponse
 ) {
 
-	response.end('hello world')
+	response.json([])
 	
 	// try {
 	// 	await Book.sync()
