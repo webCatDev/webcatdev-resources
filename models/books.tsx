@@ -6,7 +6,10 @@ import { Sequelize, DataTypes } from 'sequelize';
 // });
 
 const sequelize = new Sequelize(
-	'mysql://root:uqixmW2KXdfd5IE5TO1K@containers-us-west-37.railway.app:6422/railway'
+	'mysql://root:uqixmW2KXdfd5IE5TO1K@containers-us-west-37.railway.app:6422/railway', {
+		dialect: 'mysql',
+		dialectModule: require('mysql2')
+	}
 );
 
 export const Book = sequelize.define('Book', {
